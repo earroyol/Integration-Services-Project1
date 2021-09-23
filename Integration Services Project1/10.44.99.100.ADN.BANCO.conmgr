@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="10.44.99.100.ADN.BANCO"
+  DTS:DTSID="{A292A3A1-1409-4553-92EC-32CFA6E97CF2}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=10.44.99.100;User ID=BANCO;Initial Catalog=ADN;Provider=SQLNCLI11.1;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPs5ljuWszE+rhOd/ddn+SwAAAAACAAAAAAADZgAAwAAAABAAAAAwhXObJ464fTxrUqiYz2ctAAAAAASAAACgAAAAEAAAAEbRqJrzRCSDaXEXYbMoktV4AAAASxOn8rJkiTLIFgKxrjtHq/r+NezXXcuZWCmkhNycMjYjipmXbYfn3T+Bj7wKj4jXHNKdv6S55vEU9xnFIbIp2Wq0bH0p8JNXc0ue4pReR4dg26xUsQUNLysFTI/Oq0+XwB9LeTnDqJ+ePVN2lsryzOWMhQDcZwYDFAAAAF8lr5IvkBvkoOdrWgjMkvnE8lai</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

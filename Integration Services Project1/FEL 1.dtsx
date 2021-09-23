@@ -1,0 +1,2838 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/21/2021 10:50:06 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="GT017075_LP"
+  DTS:CreatorName="EKTGUATE\earroyo"
+  DTS:DelayValidation="True"
+  DTS:DTSID="{F511BB6C-2067-4AD2-AA10-117FC7BB914D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.166"
+  DTS:LocaleID="4106"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="118"
+  DTS:VersionGUID="{ECBC6E11-0345-44E4-A6A2-18BB2E0EE286}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.77.100.ADN.BANCO]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE}"
+      DTS:ObjectName="10.44.77.100.ADN.BANCO">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAASDIN5GDPZXHhYBTVSBaqOAAAAAASAAACgAAAAEAAAAJ/HbRnOwvVjfzK0NXCfhP0QAAAAuOYAJ0vKfwLZHFDJ1jPBzBQAAABhKIdRIzlJFhT5Rlq9zYFqI+1RXQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.98.100.ADN.BANCO]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{67EED803-4FDE-48AF-B53C-23562F23716E}"
+      DTS:ObjectName="10.44.98.100.ADN.BANCO">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACK/cjyAmDPUkKTaryoD8m8AAAAAASAAACgAAAAEAAAAORnwpDqzLENu1o5QWyESSkQAAAA3sRSDAAta4JcbtIXrYnqURQAAAAt9cB3PjrGyrVbL4sNZ1Ni/ormag</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.98.100.ADN.BANCO1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D9D02DB8-9C94-454E-9373-1314007BA651}"
+      DTS:ObjectName="10.44.98.100.ADN.BANCO1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACHhVOYjuE+zY2rL01d1K7WAAAAAASAAACgAAAAEAAAAMyQq5MtziDSCH2MaX0sxfAQAAAA0MJMR1PARP5vxHdEr3qnNhQAAAADTrKV5MmGSeq3KxVkx0dnNMKKaw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.98.100.ADN.BANCO2]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{A2F11A5B-0A4D-46F3-857E-A65C955202DC}"
+      DTS:ObjectName="10.44.98.100.ADN.BANCO2">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADTkFYWlVhJLi/SoFBQ4U9ZAAAAAASAAACgAAAAEAAAAPfqAOkO45FSG7IAUb7S3L0QAAAAJ3tH4kjsQAiDTAPu+OOyiRQAAAA3eJWXXWYbpM92iN+YR7Va6ytHqQ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.99.100.ADN.BANCO]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{70D2B898-46AF-494D-A777-883DF30419BF}"
+      DTS:ObjectName="10.44.99.100.ADN.BANCO">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAZPcPW3+eP6c/nA9y8MfuWAAAAAASAAACgAAAAEAAAALFiM+lTxh4d0PqrB6d7Na4QAAAAjwhHIt029mXGWnoq8hmLdxQAAADZB6olpXVOgT/yGx9n7kZ5CnJ5Dg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.44.99.100.ADN.BANCO1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{63099C3C-F8DA-40B2-B99E-A54B8573FF8D}"
+      DTS:ObjectName="10.44.99.100.ADN.BANCO1">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SQLConection]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.44.97.100;User ID=BANCO;Initial Catalog=ADN;Persist Security Info=True;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAB49tVoT+OavacSOQxktFO3AAAAAASAAACgAAAAEAAAAHJN3IiKv+8IvlCSKDRjLNwQAAAAPfKfAhlj2u8XWsyLBXbMuBQAAAA6uPhabaHGODzUiqPD2In2J7WEwg</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.48.212.4.DevFEL.appfel]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CC79AC76-1F7F-4544-A3AE-E6A0BC07035D}"
+      DTS:ObjectName="10.48.212.4.DevFEL.appfel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=10.48.212.4;User ID=appfel;Initial Catalog=DevFEL;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACQIyC94cbNjB9SprYQrNLtAAAAAASAAACgAAAAEAAAAIeTpJAMtCFITkdy9DNY4+goAAAA0jfFlIeBDcvpn0zJF/vxKVf7aBdj/ecvtRCxcW11Le9jYmW/F9DwvhQAAAAVAiEMtrhdctKvefFXG2L2xBG/iw</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[10.48.212.59.FACTURACION_FEL.sa]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{5E50572E-BBD7-4E0A-B981-12FFCB4874BA}"
+      DTS:ObjectName="10.48.212.59.FACTURACION_FEL.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=10.48.212.59;User ID=sa;Initial Catalog=FACTURACION_FEL;Persist Security Info=True;Application Name=SSIS-Package-{5E50572E-BBD7-4E0A-B981-12FFCB4874BA}10.48.212.59.FACTURACION_FEL.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHO3HpKa1yU+pKQDaJg73SwAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABQ2eCVRV8rTfQx76q14VvkAAAAAASAAACgAAAAEAAAAAlGUp17pFhwY2Ug3H83aFYYAAAAD4PtgvtcR4IGzWJLLQD3W3M+TpX1naIGFAAAAFhrwkW+bfXhYVEe46je/DC60Ehh</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{194A1D1D-2540-459F-BFFC-D934FAFD5CD9}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\earroyo\source\repos\FEL\daz.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6532FCE1-AE9B-4E24-9C41-BB4822A0CDC8}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4106"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\daz.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tienda"
+              DTS:DTSID="{740BEAB2-E560-4BED-9EA5-2EFF6BBAEC08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CodigoHash"
+              DTS:DTSID="{55B59F6D-028C-4986-B337-314DC7D19568}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaCreacion"
+              DTS:DTSID="{A6EE9EAE-6A20-41EA-A9D7-1865319F7E4A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FCFOLIO"
+              DTS:DTSID="{DA39FB75-94B5-47FB-90FB-7B8B641A651E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EstatusFactura"
+              DTS:DTSID="{6421C0CA-75CF-4D0A-A1A1-25995B869086}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoDocumento"
+              DTS:DTSID="{E3FFEE18-BEF8-4428-AFC6-EAB35B8C79B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SucursalADN"
+              DTS:DTSID="{5EDBC461-C079-4871-AE79-8F3D868C3DF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SucursalFacturacion"
+              DTS:DTSID="{E5360EE5-9CAF-4737-9301-49A6CA5B5788}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VentaPedido"
+              DTS:DTSID="{BE3BD6BB-41A7-46DF-9C36-637056C8DAF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="23"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SurtimientoTipo"
+              DTS:DTSID="{B29FC264-C2A6-4ABF-97FB-2686F8078726}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaSurtimiento"
+              DTS:DTSID="{55EAACC8-D7A7-4C4B-AB01-338330C7FB13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="28"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EstadoPedido"
+              DTS:DTSID="{5E54FEFD-F341-4290-84E3-412C15298893}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoPersona"
+              DTS:DTSID="{734304F3-97DD-48DB-8D7F-53474B1228A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="56"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombrefactura"
+              DTS:DTSID="{356A83AD-6ACB-48D3-BB76-4B0F8A869F4F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direccion Cliente"
+              DTS:DTSID="{7CFE7521-BEEA-4AAC-BC70-099143710082}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoVenta"
+              DTS:DTSID="{C8322D3E-7F45-4D87-BA7F-F5781BCD8A58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcTopDesc"
+              DTS:DTSID="{D9FB44A4-F30C-4F10-B757-51ACE364267E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIT"
+              DTS:DTSID="{49DB8B91-E22D-41DD-836A-7D89A4A3AF77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiprodid"
+              DTS:DTSID="{24EF36D5-8201-41A6-A09B-F4033142C7DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiCantArt"
+              DTS:DTSID="{355A177F-FCCF-486A-91F6-4AF46F2C4F2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="32"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcProdDesc"
+              DTS:DTSID="{1E77941E-BB01-4F68-ACDF-53A1F1AB7D88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fnPrcUnit"
+              DTS:DTSID="{3C597866-2E6F-4FAC-9D9D-6665ACA9310F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Descuento"
+              DTS:DTSID="{7C09D22C-1079-4222-8C16-FB825CFF1938}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="17"
+              DTS:DataScale="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IVA"
+              DTS:DTSID="{861BF29F-0DD5-42EB-BB31-E030A640F9A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="12"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVenta"
+              DTS:DTSID="{E052C41D-B3A0-49DB-8AE7-B41702C3716B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcMarca"
+              DTS:DTSID="{0876D72F-6528-4023-AA08-43C6757EA5F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoSerie"
+              DTS:DTSID="{68026036-B02F-4968-B6DE-66E92DB6D540}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoMotor"
+              DTS:DTSID="{B897B170-4FAE-4A2E-B4E3-402564A2B301}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcTipoMoto"
+              DTS:DTSID="{3BC44379-D06B-4A9A-A7F7-A76ECDD5DF68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoCaja"
+              DTS:DTSID="{58D39407-3F74-4E67-AA59-CC0993FC66EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcColor"
+              DTS:DTSID="{97BD9A1D-79E2-4023-9C37-576257684B70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcPedimento"
+              DTS:DTSID="{8499B8AC-AB5C-42BD-9799-D15548A2626B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiAnio"
+              DTS:DTSID="{69921F03-DB8F-4C71-8A9B-59E0F1C44B99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcmodelo"
+              DTS:DTSID="{D066317D-A0E7-415D-BCD4-719F0150EC34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BienOServicio"
+              DTS:DTSID="{FFEDF1D9-61CB-4C99-984C-33387AA9B5A9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones de archivos planos 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{05C00DA3-C410-42CF-8F1A-1BC3113852BE}"
+      DTS:ObjectName="Administrador de conexiones de archivos planos 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="4106"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\error1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tienda"
+              DTS:DTSID="{86A16A32-C165-40B6-BB37-8510264FFC3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CodigoHash"
+              DTS:DTSID="{41901254-A98B-4F4C-8D88-D8185CB17B01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaCreacion"
+              DTS:DTSID="{8ECEB3BE-A54D-4EDF-BA96-DBDAC3CA15EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FCFOLIO"
+              DTS:DTSID="{B40C43CF-7429-4457-B681-871EF96A59F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EstatusFactura"
+              DTS:DTSID="{B44BACA4-D40C-4900-8A0B-2C8534489756}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoDocumento"
+              DTS:DTSID="{FC8AA1A9-7C21-4B3A-BF40-D6303318A72C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SucursalADN"
+              DTS:DTSID="{9BB0038B-0FEE-47E5-ADA6-DC6635E0D718}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SucursalFacturacion"
+              DTS:DTSID="{4B32C344-C9C4-421D-A0BE-ACA5C2C56F44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VentaPedido"
+              DTS:DTSID="{6D618468-C275-4553-AD65-8B0FAC685544}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="23"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SurtimientoTipo"
+              DTS:DTSID="{AC7DF676-8AE7-4148-B4EA-83A5C6DE36C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FechaSurtimiento"
+              DTS:DTSID="{59DD8081-5CF2-439B-9AB8-EEB1DD37A71F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="28"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EstadoPedido"
+              DTS:DTSID="{60D388F4-B62C-419E-9A27-E52B00FBA52C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoPersona"
+              DTS:DTSID="{F9B37442-744C-4FFB-96E0-DB76207CC01F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="56"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nombrefactura"
+              DTS:DTSID="{B9DCB8CC-176A-4E7E-B45F-7A5343C23649}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Direccion"
+              DTS:DTSID="{F35E10D6-1133-4090-84A7-FCD7CAF713BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TipoVenta"
+              DTS:DTSID="{C0560470-A1B1-4389-AB56-8FA5200878E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcTopDesc"
+              DTS:DTSID="{710679F9-98A5-47CE-AD27-B8DBE0CF8B30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NIT"
+              DTS:DTSID="{258398BF-FEF4-4444-80CF-CFCE35284C70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiprodid"
+              DTS:DTSID="{76D722FA-DD87-4FD5-89E5-00CC6E98B201}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiCantArt"
+              DTS:DTSID="{E510463F-96F9-4165-A50F-106BDDB1350B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="32"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcProdDesc"
+              DTS:DTSID="{D674E882-1525-4E4B-8008-6C7CD62E7E7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fnPrcUnit"
+              DTS:DTSID="{1EBEA44B-211F-4C3C-9173-7128FF055C30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="8"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Descuento"
+              DTS:DTSID="{14D248DD-0241-4029-9D8A-AC475B16250D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="17"
+              DTS:DataScale="6"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IVA"
+              DTS:DTSID="{3A7E7B16-829F-44A5-A8CD-1F0BA097083D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="12"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVenta"
+              DTS:DTSID="{2CCC7812-A8AB-4A34-B220-A25FFCC4FDF9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcMarca"
+              DTS:DTSID="{39C0586D-6E64-482E-BE0A-63EB883710EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoSerie"
+              DTS:DTSID="{972E3C48-185D-4C7E-816D-D6CFCE9B0635}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoMotor"
+              DTS:DTSID="{32039160-6C77-4BE7-8411-1CBE41E23194}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcTipoMoto"
+              DTS:DTSID="{2361A63B-FD88-4DA1-8EC5-47E4CEDEB89F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcNoCaja"
+              DTS:DTSID="{5BA4606A-2BE6-4458-A797-F2AF83A100FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcColor"
+              DTS:DTSID="{E464E473-B3FE-41AA-85E3-E4AAC22AAB88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcPedimento"
+              DTS:DTSID="{B08EDB9B-65BF-4864-AB25-A9FD79C4E4E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fiAnio"
+              DTS:DTSID="{2E9BFD72-E478-4E43-A1C5-229D5EB8A944}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fcmodelo"
+              DTS:DTSID="{5B3BD678-BA92-47B0-BE3E-88D03B33562F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BienOServicio"
+              DTS:DTSID="{4C26B7D2-F7E6-4A89-9A04-EE5465D285A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{0CC3A4B4-0CF0-4127-A7DD-CA2252CF4BE4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{AC773394-840A-4BD1-BE6D-010354BE5ECA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[archivos.xls]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{58CA3419-DF9C-4A39-95B4-CD2DEC6D8F07}"
+      DTS:ObjectName="archivos.xls">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\archivos.xls" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[daz.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C3846914-B876-4521-9621-0FDF4AF9591E}"
+      DTS:ObjectName="daz.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\daz.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[daz.csv 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C42BA6C4-39C4-49FD-93A8-616DE34B5B3F}"
+      DTS:ObjectName="daz.csv 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\daz.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[daz.xls]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8CF7A2D5-50E0-45EB-9CAE-BE59DDC59FFE}"
+      DTS:ObjectName="daz.xls">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\daz.xls" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[daz1.csv]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{8267AD29-BC31-4D53-BD72-E099F44E06EA}"
+      DTS:ObjectName="daz1.csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\daz1.csv" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[dazfecha.CSV]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{3A630C67-B582-4BB0-BC7C-C544FBEA23EB}"
+      DTS:ObjectName="dazfecha.CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Users\earroyo\source\repos\FEL\dazfecha.CSV" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{68E0D6AA-5DA8-4BC9-BC03-AAFBB6257491}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="BBDD">
+      <DTS:VariableValue
+        DTS:DataType="8">ADN</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E877AC18-C1F4-4C00-9BE7-2B754ECE6156}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="contenedor">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BFCAFB45-E7B1-4261-B841-5FF14D34DE05}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="filas">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{28FCE87B-40F8-458C-8720-A5BDB1E339EF}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ID">
+      <DTS:VariableValue
+        DTS:DataType="8">BANCO</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CB973ECD-4121-4581-8377-ECCA98E6D7E4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PASS">
+      <DTS:VariableValue
+        DTS:DataType="8">AZTECA</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AFAEB300-73CF-4FD4-ABA9-2CC60FDB61DB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Result">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{463AAF82-8366-4A9B-B609-1E0F30550A1C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Server">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9CB1486B-8F15-42A7-A922-4E7ECCF6C58C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Data Source=10.44.98.100;Initial Catalog=ADN;Persist Security Info=True;User ID=BANCO;Password=AZTECA;Application Name=SSIS-Package-{D9D02DB8-9C94-454E-9373-1314007BA651};&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Server1">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=10.44.98.100;Initial Catalog=ADN;Persist Security Info=True;User ID=BANCO;Password=AZTECA;Application Name=SSIS-Package-{D9D02DB8-9C94-454E-9373-1314007BA651};</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EC32BCFB-7559-4C4C-8B72-FBCBA210717F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ServerName">
+      <DTS:VariableValue
+        DTS:DataType="8">10.44.97.100; 10.44.98.100</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6ED36E52-2846-4B5E-ADBF-DBCC95430ED6}"
+      DTS:Expression="@[User::SQLConection]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQLCommand">
+      <DTS:VariableValue
+        DTS:DataType="8">declare @FechaInicio char(50) declare @FechaFin char(50) /*************RANGO DE FECHAS DE FACTURACION****************************/  set @FechaInicio= '2021-05-01' /*-----------------FECHA DE INICIO*/ set @FechaFin=  '2021-05-06'  /*-----------------FECHA DE FINALIZACION*/   /***************************************************************/  declare @tienda int declare @nombretienda char(50) declare @nombretiendafactura char(50) select @nombretienda= fcTdaNombre from control select @nombretiendafactura= fcTdaNombre from CATFISControl select @tienda= fiNoTienda from control   /* '*************FACTURAS DE VENTA DE CONSUMO*********************'*/ select DISTINCT  @tienda as 'Tienda', factura.fccodigohash as 'CodigoHash',  factura.fdcreacion as 'FechaCreacion', factura.FCFOLIO,  case factura.fiestatusid WHEN 0 THEN 'Pendiente' WHEN 1 THEN 'Procesado Por Aplicacion' WHEN 3 THEN 'En contingencia' WHEN 4 THEN 'Procesado por Tarea' ELSE 'No encontrado' END as 'EstatusFactura',    case factura.fitipoid WHEN 1 THEN 'Factura' WHEN 7 THEN 'Procesado Por Nota de Credito'  ELSE 'No encontrado' END as 'TipoDocumento',   @nombretienda as 'SucursalADN', @nombretiendafactura as 'SucursalFacturacion', factura.fcnoreferencia as 'VentaPedido',  case WHEN pedido.FitipoVenta=1 THEN 'CONTADO' WHEN pedido.FitipoVenta=2 THEN 'CREDITO' ELSE 'No Encontrado' END 'SurtimientoTipo',  pedido.fdFecSurt as 'FechaSurtimiento', case pedido.fipedstat WHEN 1 THEN  'SURTIDO' WHEN 2 THEN 'CANCELADO ANTES DE ENTREGA' WHEN 3 THEN 'CANCELADO DESPUES DE ENTREGA' WHEN 4 THEN 'CONGELADO' WHEN 5 THEN 'APARTADO' ELSE 'NO SE ENCONTRO INFORMACION' END 'EstadoPedido',   case WHEN cliente.fcCteFisMor='1' OR cliente.fcCteFisMor= 'FI' THEN 'CLIENTE FISICO' WHEN cliente.fcCteFisMor= 'MO' THEN 'EMPRESA' ELSE 'No Encontrado' END 'TipoPersona',  cliente.fcCteNombre as 'Nombres' , cliente.fcCteAPaterno as 'ApellidoPaterno' , cliente.fcCteAMaterno as 'ApellidoMaterno', cliente.fcCteDirCalle as 'Direccion', case factura.finegocioid WHEN 1 THEN 'Consumo' WHEN 2 THEN 'Tiempo de aire' ELSE 'No encontrado' END as 'TipoVenta',  tipo_operacion.fcTopDesc, cliente.fcCteRFC as 'NIT', producto.fiprodid, detalle_pedido.fiCantArt, producto.fcProdDesc, detalle_pedido.fnPrcUnit, detalle_pedido.fnPdctoDescto, (detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto)-((detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto)/1.12) as "IVA",  case factura.finegocioid WHEN 1 THEN (detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto) WHEN 2 THEN (ventatarjeta.fnimporte) ELSE 'No Encontrado' END  as 'TotalVenta',  moto.fcMarca, moto.fcNoSerie, moto.fcNoMotor, moto.fcTipoMoto, moto.fcNoCaja, moto.fcColor, moto.fcPedimento, moto.fiAnio, moto.fcmodelo,  case when fcProdDesc like '%GTIA%' OR fcProdDesc like  '%SEGURO%' then 'S' Else 'B' END as 'BienOServicio'  from fisbitacoradocfiscal factura  FULL   JOIN pedido ON pedido.finopedido=factura.fcNoReferencia   FULL JOIN cliente ON cliente.ficteid=pedido.ficteid and cliente.fiDigitoVer=pedido.fiDigitoVer FULL JOIN detalle_pedido ON detalle_pedido.finopedido=pedido.finopedido FULL JOIN producto ON producto.fiprodid=detalle_pedido.fiprodid FULL JOIN surtimientomoto  moto ON moto.fiNoPedido=pedido.finopedido FULL JOIN control ON control.fiNoTienda=pedido.finotienda  FULL JOIN ventatarjeta ON ventatarjeta.fcmin=factura.fcnoreferencia FULL JOIN movto_caja ON movto_caja.fiNoTransac=ventatarjeta.fiTranNo  FULL  JOIN tipo_operacion ON tipo_operacion.fitipoop=movto_caja.fitipoop where  factura.finegocioid in(1) and  factura.fdCreacion between @FechaInicio AND @FechaFin      /*'*************FACTURAS DE VENTA TIEMPO DE AIRE*********************'*/ select DISTINCT  @tienda as 'Tienda', factura.fccodigohash as 'CodigoHash', factura.fdcreacion as 'FechaCreacion', factura.FCFOLIO, case factura.fiestatusid WHEN 0 THEN 'Generado' WHEN 1 THEN 'Procesado Por Aplicacion' WHEN 3 THEN 'En contingencia' WHEN 4 THEN 'Procesado por Tarea' ELSE 'No encontrado' END as 'EstatusFactura',    case factura.fitipoid WHEN 1 THEN 'Factura' WHEN 7 THEN 'Procesado Por Nota de Credito'  ELSE 'No encontrado' END as 'TipoDocumento',   @nombretienda as 'SucursalADN', @nombretiendafactura as 'SucursalFacturacion', factura.fcnoreferencia as 'VentaPedido', case WHEN pedido.FitipoVenta=1 THEN 'CONTADO' WHEN pedido.FitipoVenta=2 THEN 'CREDITO' ELSE 'CONTADO' END 'Surtimiento Tipo',  case when pedido.fdFecSurt is null then fdcreacion else pedido.fdFecSurt END 'FechaSurtimiento',    case pedido.fipedstat WHEN 1 THEN  'SURTIDO' WHEN 2 THEN 'CANCELADO ANTES DE ENTREGA' WHEN 3 THEN 'CANCELADO DESPUES DE ENTREGA' WHEN 4 THEN 'CONGELADO' WHEN 5 THEN 'APARTADO' ELSE 'SURTIDO' END 'EstadoPedido',  case WHEN cliente.fcCteFisMor='1' OR cliente.fcCteFisMor= 'FI' THEN 'CLIENTE FISICO' WHEN cliente.fcCteFisMor= 'MO' THEN 'EMPRESA' ELSE 'CLIENTE FISICO' END 'TipoPersona',  case When cliente.fcCteNombre is NULL  Then 'Consumidor Final' else cliente.fcCteNombre end 'Nombre',   cliente.fcCteAPaterno as 'ApellidoPaterno',  cliente.fcCteAMaterno as 'ApellidoMaterno',  CASE When cliente.fcCteDirCalle is NULL  Then 'CIUDAD' else cliente.fcCteDirCalle end 'Direccion',   case factura.finegocioid WHEN 1 THEN 'Consumo' WHEN 2 THEN 'Tiempo de aire' ELSE 'No encontrado' END as 'TipoVenta',  tipo_operacion.fcTopDesc,  CASE When cliente.fcCteRFC  is NULL  Then 'CF' else cliente.fcCteRFC end 'NIT',   producto.fiprodid,   CASE When detalle_pedido.fiCantArt  is NULL  Then 1 else detalle_pedido.fiCantArt end 'fiCantArt',     CASE When producto.fcProdDesc  is NULL  Then 'Tiempo de Aire' else producto.fcProdDesc end 'fcProdDesc',    ((ventatarjeta.fnimporte)/1.12) as  'fnPrcUnit',  case   when fnPdctoDescto is NULL then 0 end 'fnPdctoDescto',   (ventatarjeta.fnimporte) -((ventatarjeta.fnimporte)/1.12) as "IVA",  case factura.finegocioid WHEN 1 THEN (detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto) WHEN 2 THEN (ventatarjeta.fnimporte) ELSE 'No Encontrado' END   'TotalVenta',  moto.fcMarca, moto.fcNoSerie, moto.fcNoMotor, moto.fcTipoMoto, moto.fcNoCaja, moto.fcColor, moto.fcPedimento, moto.fiAnio, moto.fcmodelo,  case when fcProdDesc like '%GTIA%' OR fcProdDesc like  '%SEGURO%' then 'S' Else 'B' END as 'BienOServicio'  from fisbitacoradocfiscal factura  FULL   JOIN pedido ON pedido.finopedido=factura.fcNoReferencia   FULL JOIN cliente ON cliente.ficteid=pedido.ficteid and cliente.fiDigitoVer=pedido.fiDigitoVer FULL JOIN detalle_pedido ON detalle_pedido.finopedido=pedido.finopedido FULL JOIN producto ON producto.fiprodid=detalle_pedido.fiprodid FULL JOIN surtimientomoto  moto ON moto.fiNoPedido=pedido.finopedido FULL JOIN control ON control.fiNoTienda=pedido.finotienda   FULL JOIN  FISDocFiscalXTipoVenta  ON FISDocFiscalXTipoVenta.fcfolio=factura.fcfolio  FULL JOIN ventatarjeta ON ventatarjeta.ficonsec=FISDocFiscalXTipoVenta.fiConsecOpeTA  FULL JOIN movto_caja ON movto_caja.finotransac=ventatarjeta.fiTranNo INNER JOIN tipo_operacion ON tipo_operacion.fitipoop=movto_caja.fitipoop       where factura. fdCreacion between @FechaInicio AND @FechaFin       /*'*************PEDIDOS SIN FACTURACION *********************'*/  select DISTINCT @tienda as 'Tienda', factura.fccodigohash as 'CodigoHash',  factura.fdcreacion as 'FechaCreacion', factura.FCFOLIO, case factura.fiestatusid WHEN 0 THEN 'Pendiente' WHEN 1 THEN 'Procesado Por Aplicacion' WHEN 3 THEN 'En contingencia' WHEN 4 THEN 'Procesado por Tarea' ELSE 'No encontrado' END as 'EstatusFactura',    case factura.fitipoid WHEN 1 THEN 'Factura' WHEN 7 THEN 'Procesado Por Nota de Credito'  ELSE 'No encontrado' END as 'TipoDocumento',   @nombretienda as 'SucursalADN', @nombretiendafactura as 'SucursalFacturacion', p.finopedido as 'VentaPedido',  case WHEN p.FitipoVenta=1 THEN 'CONTADO' WHEN p.FitipoVenta=2 THEN 'CREDITO' ELSE 'No Encontrado' END 'SurtimientoTipo',  p.fdFecSurt as 'FechaSurtimiento', case p.fipedstat WHEN 1 THEN  'SURTIDO' WHEN 2 THEN 'CANCELADO ANTES DE ENTREGA' WHEN 3 THEN 'CANCELADO DESPUES DE ENTREGA' WHEN 4 THEN 'CONGELADO' WHEN 5 THEN 'APARTADO' ELSE 'NO SE ENCONTRO INFORMACION' END 'EstadoPedido',   case WHEN cliente.fcCteFisMor='1' OR cliente.fcCteFisMor= 'FI' THEN 'CLIENTE FISICO' WHEN cliente.fcCteFisMor= 'MO' THEN 'EMPRESA' ELSE 'No Encontrado' END 'TipoPersona',  cliente.fcCteNombre as 'Nombres' , cliente.fcCteAPaterno as 'ApellidoPaterno' , cliente.fcCteAMaterno as 'ApellidoMaterno', cliente.fcCteDirCalle as 'Direccion', case factura.finegocioid WHEN 1 THEN 'Consumo' WHEN 2 THEN 'Tiempo de aire' ELSE 'No encontrado' END as 'TipoVenta', tipo_operacion.fcTopDesc, cliente.fcCteRFC as 'NIT', producto.fiprodid, dp.fiCantArt, producto.fcProdDesc, dp.fnPrcUnit, dp.fnPdctoDescto, (dp.fnPrcUnit-dp.fnPdctoDescto)-((dp.fnPrcUnit-dp.fnPdctoDescto)/1.12) as "IVA",  dp.fnPrcUnit-dp.fnPdctoDescto   as 'TotalVenta',  moto.fcMarca, moto.fcNoSerie, moto.fcNoMotor, moto.fcTipoMoto, moto.fcNoCaja, moto.fcColor, moto.fcPedimento, moto.fiAnio, moto.fcmodelo,  case when fcProdDesc like '%GTIA%' OR fcProdDesc like  '%SEGURO%' then 'S' Else 'B' END as 'BienOServicio'  from pedido p FULL JOIN detalle_pedido dp ON dp.finopedido=p.finopedido   FULL JOIN producto ON producto.fiprodid=dp.fiprodid FULL JOIN  cliente  ON cliente.ficteid=p.ficteid and cliente.fidigitover=p.fidigitover FULL  JOIN fisbitacoradocfiscal factura ON   factura.fcnoreferencia=p.finopedido   FULL JOIN surtimientomoto  moto ON moto.fiNoPedido=p.finopedido FULL JOIN control ON control.fiNoTienda=p.finotienda FULL JOIN ventatarjeta ON ventatarjeta.fcmin=factura.fcnoreferencia FULL JOIN movto_caja ON movto_caja.fiNoTransac=ventatarjeta.fiTranNo   FULL  JOIN tipo_operacion ON tipo_operacion.fitipoop=movto_caja.fitipoop  where  p.fdPedFec between @FechaInicio and @FechaFin and   NOT producto.fcProdDesc like'%presta%' and NOT producto.fcProdDesc like'%présta%'   and NOT producto.fcProdDesc like'%VENTAS LCR OTRAS TIENDAS%'     and NOT producto.fcProdDesc like'%SEGURO%'   and NOT producto.fcProdDesc like'%INGRESO ASEGURADO%'   and NOT producto.fcProdDesc like'%ECH%'   and NOT producto.fcProdDesc like'%CREDIMAX CONTINUO%'   and NOT EXISTS(select fcnoreferencia from fisbitacoradocfiscal  where factura.fcnoreferencia=p.finopedido )  and p.fiPedStat in(1,3,4)</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{233F89EB-5738-40A4-8BF5-EEE299DC79EC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SQLConection">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=10.44.97.100;Initial Catalog=ADN;Persist Security Info=True;User ID=BANCO;Password=AZTECA;Application Name=SSIS-Package-{66C5E5A0-5DAA-48B6-8882-82D24C4BF7CE};</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Codigo"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Tarea Script"
+      DTS:DTSID="{2C389B21-534A-4FE1-A83F-4CCA1860A6D3}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Codigo"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_17315b43d2fc4876ba0d1a6497f176f5"
+          VSTAMajorVersion="15"
+          VSTAMinorVersion="0"
+          Language="CSharp" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Contenedor de bucles Foreach"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Contenedor de bucles Foreach"
+      DTS:DTSID="{87F66BAC-0328-4C08-8A97-86B3298D24ED}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:ForceExecutionResult="0"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Contenedor de bucles Foreach">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{1FA9BF53-D4A8-4905-8054-1C878ED158C1}"
+        DTS:ObjectName="{1FA9BF53-D4A8-4905-8054-1C878ED158C1}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateAllRows"
+            VarName="User::Result" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Contenedor de bucles Foreach\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:DelayValidation="True"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{EFD0E109-1EFA-45AE-BB07-EC6705DE5A3A}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+                  description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+                  name="Destino de ADO NET 1"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Nombre de la tabla de la base de datos de destino."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."TBL_CARGAGENERAL"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[10.48.212.59.FACTURACION_FEL.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[10.48.212.59.FACTURACION_FEL.sa]"
+                      description="Administrador de conexiones administrado"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Entrada de destino de ADO NET">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[Tienda]"
+                          cachedDataType="i4"
+                          cachedName="Tienda"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIENDA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Tienda]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[CodigoHash]"
+                          cachedDataType="wstr"
+                          cachedLength="200"
+                          cachedName="CodigoHash"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CODIGOHASH]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[CodigoHash]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[FechaCreacion]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaCreacion"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FECHACREACION]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaCreacion]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[FCFOLIO]"
+                          cachedDataType="wstr"
+                          cachedLength="15"
+                          cachedName="FCFOLIO"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCFOLIO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FCFOLIO]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[EstatusFactura]"
+                          cachedDataType="wstr"
+                          cachedLength="24"
+                          cachedName="EstatusFactura"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ESTATUSFACTURA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstatusFactura]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[TipoDocumento]"
+                          cachedDataType="wstr"
+                          cachedLength="29"
+                          cachedName="TipoDocumento"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPODOCUMENTO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoDocumento]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[SucursalADN]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="SucursalADN"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SUCURSALADN]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalADN]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[SucursalFacturacion]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="SucursalFacturacion"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SUCURSALFACTURACION]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalFacturacion]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[VentaPedido]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="VentaPedido"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[VENTAPEDIDO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[VentaPedido]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[SurtimientoTipo]"
+                          cachedDataType="wstr"
+                          cachedLength="23"
+                          cachedName="SurtimientoTipo"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SURTIMIENTOTIPO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SurtimientoTipo]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[FechaSurtimiento]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FechaSurtimiento"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FECHASURTIMIENTO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaSurtimiento]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[EstadoPedido]"
+                          cachedDataType="wstr"
+                          cachedLength="28"
+                          cachedName="EstadoPedido"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ESTADOPEDIDO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstadoPedido]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[TipoPersona]"
+                          cachedDataType="wstr"
+                          cachedLength="14"
+                          cachedName="TipoPersona"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPOPERSONA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[Nombrefactura]"
+                          cachedDataType="wstr"
+                          cachedLength="56"
+                          cachedName="Nombrefactura"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[NOMBREFACTURA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombrefactura]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[TipoVenta]"
+                          cachedDataType="wstr"
+                          cachedLength="14"
+                          cachedName="TipoVenta"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPOVENTA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoVenta]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcTopDesc]"
+                          cachedDataType="wstr"
+                          cachedLength="60"
+                          cachedName="fcTopDesc"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCTOPDESC]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTopDesc]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[NIT]"
+                          cachedDataType="nText"
+                          cachedName="NIT"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[NIT]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[NIT]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fiprodid]"
+                          cachedDataType="i4"
+                          cachedName="fiprodid"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FIPRODID]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiprodid]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fiCantArt]"
+                          cachedDataType="i2"
+                          cachedName="fiCantArt"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FICANTART]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiCantArt]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcProdDesc]"
+                          cachedDataType="wstr"
+                          cachedLength="32"
+                          cachedName="fcProdDesc"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCPRODDESC]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcProdDesc]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fnPrcUnit]"
+                          cachedDataType="numeric"
+                          cachedName="fnPrcUnit"
+                          cachedPrecision="8"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FNPRCUNIT]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fnPrcUnit]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[Descuento]"
+                          cachedDataType="numeric"
+                          cachedName="Descuento"
+                          cachedPrecision="8"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[DESCUENTO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Descuento]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[IVA]"
+                          cachedDataType="numeric"
+                          cachedName="IVA"
+                          cachedPrecision="17"
+                          cachedScale="6"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[IVA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[IVA]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[TotalVenta]"
+                          cachedDataType="numeric"
+                          cachedName="TotalVenta"
+                          cachedPrecision="10"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TOTALVENTA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TotalVenta]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcMarca]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcMarca"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCMARCA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcMarca]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcNoSerie]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcNoSerie"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOSERIE]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoSerie]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcNoMotor]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcNoMotor"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOMOTOR]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoMotor]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcTipoMoto]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcTipoMoto"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCTIPOMOTO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTipoMoto]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcNoCaja]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcNoCaja"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOCAJA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoCaja]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcColor]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcColor"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCCOLOR]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcColor]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcPedimento]"
+                          cachedDataType="wstr"
+                          cachedLength="40"
+                          cachedName="fcPedimento"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCPEDIMENTO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcPedimento]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fiAnio]"
+                          cachedDataType="i4"
+                          cachedName="fiAnio"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FIANIO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiAnio]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[fcmodelo]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="fcmodelo"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCMODELO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcmodelo]" />
+                        <inputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].Columns[BienOServicio]"
+                          cachedDataType="wstr"
+                          cachedLength="1"
+                          cachedName="BienOServicio"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[BIENOSERVICIO]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[BienOServicio]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIENDA]"
+                          dataType="i4"
+                          name="TIENDA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[CODIGOHASH]"
+                          dataType="wstr"
+                          length="200"
+                          name="CODIGOHASH" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FECHACREACION]"
+                          dataType="dbTimeStamp"
+                          name="FECHACREACION" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCFOLIO]"
+                          dataType="wstr"
+                          length="50"
+                          name="FCFOLIO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ESTATUSFACTURA]"
+                          dataType="wstr"
+                          length="50"
+                          name="ESTATUSFACTURA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPODOCUMENTO]"
+                          dataType="wstr"
+                          length="50"
+                          name="TIPODOCUMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SUCURSALADN]"
+                          dataType="wstr"
+                          length="50"
+                          name="SUCURSALADN" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SUCURSALFACTURACION]"
+                          dataType="wstr"
+                          length="50"
+                          name="SUCURSALFACTURACION" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[VENTAPEDIDO]"
+                          dataType="r8"
+                          name="VENTAPEDIDO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[SURTIMIENTOTIPO]"
+                          dataType="wstr"
+                          length="50"
+                          name="SURTIMIENTOTIPO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FECHASURTIMIENTO]"
+                          dataType="dbTimeStamp"
+                          name="FECHASURTIMIENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[ESTADOPEDIDO]"
+                          dataType="wstr"
+                          length="50"
+                          name="ESTADOPEDIDO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPOPERSONA]"
+                          dataType="wstr"
+                          length="50"
+                          name="TIPOPERSONA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[NOMBREFACTURA]"
+                          dataType="wstr"
+                          length="100"
+                          name="NOMBREFACTURA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[DIRECCION]"
+                          dataType="wstr"
+                          length="200"
+                          name="DIRECCION" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TIPOVENTA]"
+                          dataType="wstr"
+                          length="50"
+                          name="TIPOVENTA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCTOPDESC]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCTOPDESC" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[NIT]"
+                          dataType="wstr"
+                          length="50"
+                          name="NIT" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FIPRODID]"
+                          dataType="r8"
+                          name="FIPRODID" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FICANTART]"
+                          dataType="r8"
+                          name="FICANTART" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCPRODDESC]"
+                          dataType="wstr"
+                          length="50"
+                          name="FCPRODDESC" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FNPRCUNIT]"
+                          dataType="r8"
+                          name="FNPRCUNIT" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[DESCUENTO]"
+                          dataType="r8"
+                          name="DESCUENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[IVA]"
+                          dataType="r8"
+                          name="IVA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[TOTALVENTA]"
+                          dataType="r8"
+                          name="TOTALVENTA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCMARCA]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCMARCA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOSERIE]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCNOSERIE" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOMOTOR]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCNOMOTOR" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCTIPOMOTO]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCTIPOMOTO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCNOCAJA]"
+                          dataType="wstr"
+                          length="100"
+                          name="FCNOCAJA" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCCOLOR]"
+                          dataType="wstr"
+                          length="50"
+                          name="FCCOLOR" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCPEDIMENTO]"
+                          dataType="wstr"
+                          length="50"
+                          name="FCPEDIMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FIANIO]"
+                          dataType="wstr"
+                          length="25"
+                          name="FIANIO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[FCMODELO]"
+                          dataType="wstr"
+                          length="50"
+                          name="FCMODELO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET].ExternalColumns[BIENOSERVICIO]"
+                          dataType="wstr"
+                          length="50"
+                          name="BIENOSERVICIO" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Salida de error de destino de ADO NET"
+                      synchronousInputId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+                  description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+                  name="Origen de ADO NET"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">declare @FechaInicio VARCHAR(50),  @FechaFin VARCHAR(50);
+/****RANGO DE FECHAS DE FACTURACION*********/
+
+set @FechaInicio= '2021-09-01 0:00:00'  --/----------------FECHA DE INICIO/
+set  @FechaFin=  '2021-09-11 23:59:00'  --/----------------FECHA DE FINALIZACION/  
+
+declare @tienda int
+declare @nombretienda VARCHAR(50)
+declare @nombretiendafactura VARCHAR(50)
+select @nombretienda= fcTdaNombre from control
+select @nombretiendafactura= fcTdaNombre from CATFISControl
+select @tienda= fiNoTienda from control
+
+--FACTURAS DE VENTA DE CONSUMO*******'/
+--/'*****FACTURAS DE VENTA TIEMPO DE AIRE*******'/
+select
+DISTINCT  @tienda as 'Tienda',
+factura.fccodigohash as 'CodigoHash',
+factura.fdcreacion as 'FechaCreacion',
+factura.FCFOLIO,
+
+case factura.fiestatusid
+WHEN 0 THEN 'Generado'
+WHEN 1 THEN 'Procesado Por Aplicacion'
+WHEN 3 THEN 'En contingencia'
+WHEN 4 THEN 'Procesado por Tarea'
+ELSE 'No encontrado'
+END as 'EstatusFactura',  
+
+case factura.fitipoid
+WHEN 1 THEN 'Factura'
+WHEN 7 THEN 'Procesado Por Nota de Credito'
+ELSE 'No encontrado'
+END as 'TipoDocumento',  
+
+@nombretienda as 'SucursalADN',
+@nombretiendafactura as 'SucursalFacturacion',
+factura.fcnoreferencia as 'VentaPedido',
+
+case pedido.fitipoventa
+WHEN 1 THEN 'VENTA CONTADO     '
+WHEN 2 THEN 'VENTA CREDITO     '
+WHEN 3 THEN 'VENTA DE APARTADO '
+WHEN 4 THEN 'VENTA MOSTRADOR   '
+WHEN 5 THEN 'CREDITO PLUS      '
+WHEN 6 THEN 'CRED.PRES UNEFON  '
+WHEN 7 THEN 'POR CANC.(e-comm) '
+WHEN 8 THEN 'CRED. HIPOTECARIO '
+WHEN 9 THEN 'ARRENDAMIENTO PURO'
+WHEN 10 THEN 'LINEA CORPORATIVA '
+WHEN 14 THEN 'CREDITO T.A. IUSA '
+ELSE 'VENTA DE TIEMPO DE AIRE'
+END 'SurtimientoTipo',
+
+case
+when pedido.fdFecSurt is null then fdcreacion
+else pedido.fdFecSurt
+END 'FechaSurtimiento',
+
+case pedido.fipedstat
+WHEN 1 THEN  'SURTIDO'
+WHEN 2 THEN 'CANCELADO ANTES DE ENTREGA'
+WHEN 3 THEN 'CANCELADO DESPUES DE ENTREGA'
+WHEN 4 THEN 'CONGELADO'
+WHEN 5 THEN 'APARTADO'
+ELSE 'SURTIDO'
+END 'EstadoPedido',
+
+case
+WHEN cliente.fcCteFisMor='1' OR cliente.fcCteFisMor= 'FI' THEN 'CLIENTE FISICO'
+WHEN cliente.fcCteFisMor= 'MO' THEN 'EMPRESA'
+ELSE 'CLIENTE FISICO'
+END 'TipoPersona',
+
+
+CONCAT(RTRIM(LTRIM(fcCteNombre)),' ',RTRIM(LTRIM(fcCteAPaterno)),' ',RTRIM(LTRIM(fcCteAMaterno))) AS Nombrefactura,
+
+CASE
+When cliente.fcCteDirCalle is NULL  Then 'CIUDAD'
+When cliente.fcCteDirCalle like '%Direccion%' then 'CIUDAD'
+When cliente.fcCteDirCalle like 'SN' then 'CIUDAD'
+When cliente.fcCteDirCalle like '' then 'CIUDAD'
+else  REPLACE(replace(fcCteDirCalle,'.',''),',','') 
+end 'Direccion',
+
+case factura.finegocioid
+WHEN 1 THEN 'Consumo'
+WHEN 2 THEN 'Tiempo de aire'
+ELSE 'No encontrado'
+END as 'TipoVenta',
+
+tipo_operacion.fcTopDesc,
+
+case 
+WHEN cliente.fcCteRFC IS NULL THEN 'CF'
+when cliente.fcCteRFC=' ' then 'CF'
+when cliente.fcCteRFC like '%RFC%' then 'CF'
+when cliente.fcCteRFC like '%RCF%' then 'CF'
+when cliente.fcCteRFC like '%EKT%' then 'CF'
+when cliente.fcCteRFC='0' then 'CF'
+when cliente.fcCteRFC='1' then 'CF'
+else REPLACE(replace(fcCteRFC,'-',''),'/','') 
+END as NIT,
+
+producto.fiprodid,
+detalle_pedido.fiCantArt,
+producto.fcProdDesc, 
+detalle_pedido.fnPrcUnit,
+
+case 
+WHEN pedido.ficteid=99999 THEN detalle_pedido.fnProdDesctoE
+ELSE detalle_pedido.fnPdctoDescto
+END 'Descuento',
+(detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto-detalle_pedido.fnProdDesctoE)-((detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto-detalle_pedido.fnProdDesctoE)/1.12) as "IVA",
+
+case factura.finegocioid
+WHEN 1 THEN (detalle_pedido.fnPrcUnit-detalle_pedido.fnPdctoDescto-detalle_pedido.fnProdDesctoE)
+WHEN 2 THEN (ventatarjeta.fnimporte) 
+ELSE 'No Encontrado'
+END  as 'TotalVenta',
+
+moto.fcMarca,
+moto.fcNoSerie,
+moto.fcNoMotor,
+moto.fcTipoMoto,
+moto.fcNoCaja,
+moto.fcColor,
+moto.fcPedimento,
+moto.fiAnio,
+moto.fcmodelo,
+
+case
+when fcProdDesc like '%GTIA%' OR fcProdDesc like  '%SEGURO%' then 'S'
+Else 'B'
+END as 'BienOServicio'
+
+from fisbitacoradocfiscal factura  
+FULL JOIN pedido ON pedido.finopedido=factura.fcNoReferencia  
+FULL JOIN cliente ON cliente.ficteid=pedido.ficteid and cliente.fiDigitoVer=pedido.fiDigitoVer and cliente.finotienda=pedido.finotienda 
+FULL JOIN detalle_pedido ON detalle_pedido.finopedido=pedido.finopedido 
+FULL JOIN producto ON producto.fiprodid=detalle_pedido.fiprodid 
+FULL JOIN surtimientomoto  moto ON moto.fiNoPedido=pedido.finopedido 
+FULL JOIN control ON control.fiNoTienda=pedido.finotienda
+FULL JOIN  FISDocFiscalXTipoVenta  ON FISDocFiscalXTipoVenta.fcfolio=factura.fcfolio
+FULL JOIN ventatarjeta ON ventatarjeta.ficonsec=FISDocFiscalXTipoVenta.fiConsecOpeTA
+FULL JOIN movto_caja ON movto_caja.finotransac=ventatarjeta.fiTranNo INNER JOIN tipo_operacion ON tipo_operacion.fitipoop=movto_caja.fitipoop  
+FULL JOIN gbdcartinsert ON  gbdcartinsert.finopedidonue=pedido.finopedido and gbdcartinsert.ficteid=pedido.ficteid and gbdcartinsert.fidigitover=pedido.fidigitover and gbdcartinsert.finotienda=pedido.finotienda
+where --factura.finegocioid=1 and factura.fiestatusid in (3,0) and pedido.fipedstat=1  and 
+--factura. fdCreacion between @FechaInicio AND @FechaFin
+(factura.finegocioid=1 or factura.finegocioid is null) and (factura.fiestatusid=0 or factura.fiestatusid=3 or factura.fiestatusid is null) and (pedido.fipedstat=1 or pedido.fipedstat is null)  and factura. fdCreacion between @FechaInicio AND @FechaFin</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                      name="AllowImplicitStringConversion">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Nombre de la tabla de la base de datos de origen."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Especificar el modo de recuperar información de columnas externas"
+                      name="AccessMode"
+                      typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[10.44.98.100.ADN.BANCO2]"
+                      connectionManagerRefId="Package.ConnectionManagers[10.44.98.100.ADN.BANCO2]"
+                      description="Administrador de conexiones administrado"
+                      name="IDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                      name="Salida de origen de ADO NET">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Tienda]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Tienda]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Tienda]"
+                          name="Tienda"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[CodigoHash]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[CodigoHash]"
+                          length="200"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[CodigoHash]"
+                          name="CodigoHash"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaCreacion]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaCreacion]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaCreacion]"
+                          name="FechaCreacion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FCFOLIO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FCFOLIO]"
+                          length="15"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FCFOLIO]"
+                          name="FCFOLIO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstatusFactura]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[EstatusFactura]"
+                          length="24"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstatusFactura]"
+                          name="EstatusFactura"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoDocumento]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoDocumento]"
+                          length="29"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoDocumento]"
+                          name="TipoDocumento"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalADN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SucursalADN]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalADN]"
+                          name="SucursalADN"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalFacturacion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SucursalFacturacion]"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SucursalFacturacion]"
+                          name="SucursalFacturacion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[VentaPedido]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[VentaPedido]"
+                          length="20"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[VentaPedido]"
+                          name="VentaPedido"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SurtimientoTipo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SurtimientoTipo]"
+                          length="23"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[SurtimientoTipo]"
+                          name="SurtimientoTipo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaSurtimiento]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaSurtimiento]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[FechaSurtimiento]"
+                          name="FechaSurtimiento"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstadoPedido]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[EstadoPedido]"
+                          length="28"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[EstadoPedido]"
+                          name="EstadoPedido"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
+                          length="14"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoPersona]"
+                          name="TipoPersona"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombrefactura]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Nombrefactura]"
+                          length="56"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Nombrefactura]"
+                          name="Nombrefactura"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Direccion]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Direccion]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Direccion]"
+                          name="Direccion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoVenta]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoVenta]"
+                          length="14"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TipoVenta]"
+                          name="TipoVenta"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTopDesc]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcTopDesc]"
+                          length="60"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTopDesc]"
+                          name="fcTopDesc"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[NIT]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[NIT]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[NIT]"
+                          name="NIT"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiprodid]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiprodid]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiprodid]"
+                          name="fiprodid"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiCantArt]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiCantArt]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiCantArt]"
+                          name="fiCantArt"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcProdDesc]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcProdDesc]"
+                          length="32"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcProdDesc]"
+                          name="fcProdDesc"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fnPrcUnit]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fnPrcUnit]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fnPrcUnit]"
+                          name="fnPrcUnit"
+                          precision="8"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Descuento]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Descuento]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Descuento]"
+                          name="Descuento"
+                          precision="8"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[IVA]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[IVA]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[IVA]"
+                          name="IVA"
+                          precision="17"
+                          scale="6"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TotalVenta]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TotalVenta]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[TotalVenta]"
+                          name="TotalVenta"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcMarca]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcMarca]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcMarca]"
+                          name="fcMarca"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoSerie]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoSerie]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoSerie]"
+                          name="fcNoSerie"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoMotor]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoMotor]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoMotor]"
+                          name="fcNoMotor"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTipoMoto]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcTipoMoto]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcTipoMoto]"
+                          name="fcTipoMoto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoCaja]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoCaja]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcNoCaja]"
+                          name="fcNoCaja"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcColor]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcColor]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcColor]"
+                          name="fcColor"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcPedimento]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcPedimento]"
+                          length="40"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcPedimento]"
+                          name="fcPedimento"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiAnio]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiAnio]"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fiAnio]"
+                          name="fiAnio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcmodelo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcmodelo]"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[fcmodelo]"
+                          name="fcmodelo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[BienOServicio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversión"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[BienOServicio]"
+                          length="1"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[BienOServicio]"
+                          name="BienOServicio"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Tienda]"
+                          dataType="i4"
+                          name="Tienda" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[CodigoHash]"
+                          dataType="wstr"
+                          length="200"
+                          name="CodigoHash" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaCreacion]"
+                          dataType="dbTimeStamp"
+                          name="FechaCreacion" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FCFOLIO]"
+                          dataType="wstr"
+                          length="15"
+                          name="FCFOLIO" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[EstatusFactura]"
+                          dataType="wstr"
+                          length="24"
+                          name="EstatusFactura" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoDocumento]"
+                          dataType="wstr"
+                          length="29"
+                          name="TipoDocumento" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SucursalADN]"
+                          dataType="wstr"
+                          length="50"
+                          name="SucursalADN" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SucursalFacturacion]"
+                          dataType="wstr"
+                          length="50"
+                          name="SucursalFacturacion" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[VentaPedido]"
+                          dataType="wstr"
+                          length="20"
+                          name="VentaPedido" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[SurtimientoTipo]"
+                          dataType="wstr"
+                          length="23"
+                          name="SurtimientoTipo" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[FechaSurtimiento]"
+                          dataType="dbTimeStamp"
+                          name="FechaSurtimiento" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[EstadoPedido]"
+                          dataType="wstr"
+                          length="28"
+                          name="EstadoPedido" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoPersona]"
+                          dataType="wstr"
+                          length="14"
+                          name="TipoPersona" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Nombrefactura]"
+                          dataType="wstr"
+                          length="56"
+                          name="Nombrefactura" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Direccion]"
+                          dataType="nText"
+                          name="Direccion" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TipoVenta]"
+                          dataType="wstr"
+                          length="14"
+                          name="TipoVenta" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcTopDesc]"
+                          dataType="wstr"
+                          length="60"
+                          name="fcTopDesc" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[NIT]"
+                          dataType="nText"
+                          name="NIT" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiprodid]"
+                          dataType="i4"
+                          name="fiprodid" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiCantArt]"
+                          dataType="i2"
+                          name="fiCantArt" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcProdDesc]"
+                          dataType="wstr"
+                          length="32"
+                          name="fcProdDesc" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fnPrcUnit]"
+                          dataType="numeric"
+                          name="fnPrcUnit"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Descuento]"
+                          dataType="numeric"
+                          name="Descuento"
+                          precision="8"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[IVA]"
+                          dataType="numeric"
+                          name="IVA"
+                          precision="17"
+                          scale="6" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[TotalVenta]"
+                          dataType="numeric"
+                          name="TotalVenta"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcMarca]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcMarca" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoSerie]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcNoSerie" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoMotor]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcNoMotor" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcTipoMoto]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcTipoMoto" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcNoCaja]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcNoCaja" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcColor]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcColor" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcPedimento]"
+                          dataType="wstr"
+                          length="40"
+                          name="fcPedimento" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fiAnio]"
+                          dataType="i4"
+                          name="fiAnio" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[fcmodelo]"
+                          dataType="wstr"
+                          length="30"
+                          name="fcmodelo" />
+                        <externalMetadataColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[BienOServicio]"
+                          dataType="wstr"
+                          length="1"
+                          name="BienOServicio" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                      isErrorOut="true"
+                      name="Salida de error de origen de ADO NET">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Tienda]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Tienda]"
+                          name="Tienda" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[CodigoHash]"
+                          dataType="wstr"
+                          length="200"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[CodigoHash]"
+                          name="CodigoHash" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaCreacion]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaCreacion]"
+                          name="FechaCreacion" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FCFOLIO]"
+                          dataType="wstr"
+                          length="15"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FCFOLIO]"
+                          name="FCFOLIO" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[EstatusFactura]"
+                          dataType="wstr"
+                          length="24"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[EstatusFactura]"
+                          name="EstatusFactura" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoDocumento]"
+                          dataType="wstr"
+                          length="29"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoDocumento]"
+                          name="TipoDocumento" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SucursalADN]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SucursalADN]"
+                          name="SucursalADN" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SucursalFacturacion]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SucursalFacturacion]"
+                          name="SucursalFacturacion" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[VentaPedido]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[VentaPedido]"
+                          name="VentaPedido" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SurtimientoTipo]"
+                          dataType="wstr"
+                          length="23"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[SurtimientoTipo]"
+                          name="SurtimientoTipo" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaSurtimiento]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[FechaSurtimiento]"
+                          name="FechaSurtimiento" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[EstadoPedido]"
+                          dataType="wstr"
+                          length="28"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[EstadoPedido]"
+                          name="EstadoPedido" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
+                          dataType="wstr"
+                          length="14"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoPersona]"
+                          name="TipoPersona" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Nombrefactura]"
+                          dataType="wstr"
+                          length="56"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Nombrefactura]"
+                          name="Nombrefactura" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Direccion]"
+                          dataType="nText"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Direccion]"
+                          name="Direccion" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoVenta]"
+                          dataType="wstr"
+                          length="14"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TipoVenta]"
+                          name="TipoVenta" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcTopDesc]"
+                          dataType="wstr"
+                          length="60"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcTopDesc]"
+                          name="fcTopDesc" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[NIT]"
+                          dataType="nText"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[NIT]"
+                          name="NIT" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiprodid]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiprodid]"
+                          name="fiprodid" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiCantArt]"
+                          dataType="i2"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiCantArt]"
+                          name="fiCantArt" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcProdDesc]"
+                          dataType="wstr"
+                          length="32"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcProdDesc]"
+                          name="fcProdDesc" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fnPrcUnit]"
+                          dataType="numeric"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fnPrcUnit]"
+                          name="fnPrcUnit"
+                          precision="8"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Descuento]"
+                          dataType="numeric"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Descuento]"
+                          name="Descuento"
+                          precision="8"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[IVA]"
+                          dataType="numeric"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[IVA]"
+                          name="IVA"
+                          precision="17"
+                          scale="6" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TotalVenta]"
+                          dataType="numeric"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[TotalVenta]"
+                          name="TotalVenta"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcMarca]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcMarca]"
+                          name="fcMarca" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoSerie]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoSerie]"
+                          name="fcNoSerie" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoMotor]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoMotor]"
+                          name="fcNoMotor" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcTipoMoto]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcTipoMoto]"
+                          name="fcTipoMoto" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoCaja]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcNoCaja]"
+                          name="fcNoCaja" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcColor]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcColor]"
+                          name="fcColor" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcPedimento]"
+                          dataType="wstr"
+                          length="40"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcPedimento]"
+                          name="fcPedimento" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiAnio]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fiAnio]"
+                          name="fiAnio" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcmodelo]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[fcmodelo]"
+                          name="fcmodelo" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[BienOServicio]"
+                          dataType="wstr"
+                          length="1"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[BienOServicio]"
+                          name="BienOServicio" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Salida de origen de ADO NET]"
+                  endId="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1.Inputs[Entrada de destino de ADO NET]"
+                  name="Salida de origen de ADO NET"
+                  startId="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{61DEE85D-729E-4204-83AB-650FE7D75644}"
+          DTS:ObjectName="{61DEE85D-729E-4204-83AB-650FE7D75644}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::SQLConection" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute Package Task"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{31E17E6B-4FED-4C50-A63F-D84B4DF3B996}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Package Task"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>FEL 2.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{29965516-FEB0-4929-847D-F3B0CF94C8B9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5E50572E-BBD7-4E0A-B981-12FFCB4874BA}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="select DATASOURCE from TBL_SERVER"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::Result" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Sistema de archivos"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="Tarea Sistema de archivos"
+      DTS:Disabled="True"
+      DTS:DTSID="{6C7507AD-BEC9-4496-A42F-A9F61327C093}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Sistema de archivos"
+      DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="RenameFile"
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="{C3846914-B876-4521-9621-0FDF4AF9591E}"
+          TaskDestinationPath="{3A630C67-B582-4BB0-BC7C-C544FBEA23EB}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{C9DE8E0A-DE54-4DDD-897D-74BB6CA36C2C}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Contenedor de bucles Foreach" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5C8F3EA8-ED59-49D2-88CC-3C1BD67823FC}"
+      DTS:From="Package\Contenedor de bucles Foreach"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Codigo"
+      DTS:Value="1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{2E978FF6-46F4-4A6F-9297-3454B55159A5}"
+      DTS:From="Package\Contenedor de bucles Foreach"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:To="Package\Execute Package Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="111,42"
+          Id="Package\Codigo"
+          TopLeft="636,170" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Contenedor de bucles Foreach\Data Flow Task"
+          TopLeft="31.5,114" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="224,266"
+          Size="224,309"
+          Id="Package\Contenedor de bucles Foreach"
+          TopLeft="378,91" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="147,65" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Tarea Sistema de archivos"
+          TopLeft="629,396" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="317,86">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61,159.5"
+              Start="0,0"
+              End="53.5,159.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.5,0"
+                    Point2="30.5,0"
+                    Point3="30.5,4" />
+                  <mssgle:LineSegment
+                    End="30.5,155.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.5,155.5"
+                    Point2="30.5,159.5"
+                    Point3="34.5,159.5" />
+                  <mssgle:LineSegment
+                    End="53.5,159.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="602,245.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34,-54.5"
+              Start="0,0"
+              End="26.5,-54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13,0"
+                    Point2="17,0"
+                    Point3="17,-4" />
+                  <mssgle:LineSegment
+                    End="17,-50.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17,-50.5"
+                    Point2="17,-54.5"
+                    Point3="21,-54.5" />
+                  <mssgle:LineSegment
+                    End="26.5,-54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="5.47130859375,1,23.0573828125,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Execute Package Task"
+          TopLeft="697,273" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="602,294.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95,0"
+              Start="0,0"
+              End="87.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="87.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Contenedor de bucles Foreach\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1"
+          TopLeft="355,29" />
+        <EdgeLayout
+          Id="Package\Contenedor de bucles Foreach\Data Flow Task.Paths[Salida de origen de ADO NET]"
+          TopLeft="177.5,26.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="177.5,23.5"
+              Start="0,0"
+              End="170,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="84.75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.75,0"
+                    Point2="88.75,0"
+                    Point3="88.75,4" />
+                  <mssgle:LineSegment
+                    End="88.75,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88.75,19.5"
+                    Point2="88.75,23.5"
+                    Point3="92.75,23.5" />
+                  <mssgle:LineSegment
+                    End="170,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenedor de bucles Foreach\Data Flow Task\Destino de ADO NET 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Contenedor de bucles Foreach\Data Flow Task\Origen de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
